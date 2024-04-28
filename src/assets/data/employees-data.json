@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "أحمد محمد علي",
+    "condition": "Active",
+    "serial": "5467898765",
+    "accessType": "حامل الكارت",
+    "job": "محاسب",
+    "phoneNumber": "+20 125 833 9687"
+  },
+  {
+    "id": 2,
+    "name": "أحمد محمد علي",
+    "condition": "Inactive",
+    "serial": "54987232765",
+    "accessType": "مدير الهيكل التنظيمي",
+    "job": "مدير",
+    "phoneNumber": "+20 125 833 9687"
+  },
+  {
+    "id": 3,
+    "name": "سارة أحمد علي",
+    "condition": "Active",
+    "serial": "5483928712",
+    "accessType": "حامل الكارت",
+    "job": "مهندسة",
+    "phoneNumber": "+20 125 777 1234"
+  },
+  {
+    "id": 4,
+    "name": "محمود علي خليل",
+    "condition": "Active",
+    "serial": "5432187654",
+    "accessType": "حامل الكارت",
+    "job": "مدرس",
+    "phoneNumber": "+20 125 999 4567"
+  },
+  {
+    "id": 5,
+    "name": "ليلى محمد صالح",
+    "condition": "Active",
+    "serial": "5498765432",
+    "accessType": "حامل الكارت",
+    "job": "طبيبة",
+    "phoneNumber": "+20 125 888 9876"
+  },
+  {
+    "id": 6,
+    "name": "علي محمد عبدالرحمن",
+    "condition": "Inactive",
+    "serial": "5478234567",
+    "accessType": "مدير الهيكل التنظيمي",
+    "job": "مدير",
+    "phoneNumber": "+20 125 777 3333"
+  },
+  {
+    "id": 7,
+    "name": "نورا عبدالعزيز إبراهيم",
+    "condition": "Active",
+    "serial": "5498712345",
+    "accessType": "حامل الكارت",
+    "job": "محاسبة",
+    "phoneNumber": "+20 125 666 7890"
+  },
+  {
+    "id": 8,
+    "name": "خالد مصطفى حسن",
+    "condition": "Active",
+    "serial": "5487654321",
+    "accessType": "حامل الكارت",
+    "job": "مهندس",
+    "phoneNumber": "+20 125 555 4321"
+  },
+  {
+    "id": 9,
+    "name": "مريم علي محمد",
+    "condition": "Active",
+    "serial": "5456789123",
+    "accessType": "حامل الكارت",
+    "job": "معلمة",
+    "phoneNumber": "+20 125 444 5678"
+  },
+  {
+    "id": 10,
+    "name": "حسن إبراهيم محمد",
+    "condition": "Inactive",
+    "serial": "5432987654",
+    "accessType": "مدير الهيكل التنظيمي",
+    "job": "مدير",
+    "phoneNumber": "+20 125 333 9876"
+  },
+  {
+    "id": 11,
+    "name": "فاطمة أحمد علي",
+    "condition": "Active",
+    "serial": "5478934567",
+    "accessType": "حامل الكارت",
+    "job": "طبيبة",
+    "phoneNumber": "+20 125 222 3456"
+  },
+  {
+    "id": 12,
+    "name": "عبدالله محمد صالح",
+    "condition": "Active",
+    "serial": "5423456789",
+    "accessType": "حامل الكارت",
+    "job": "مدرس",
+    "phoneNumber": "+20 125 111 6789"
+  },
+  {
+    "id": 13,
+    "name": "ريم محمد عبدالرحمن",
+    "condition": "Active",
+    "serial": "5498765432",
+    "accessType": "حامل الكارت",
+    "job": "محاسبة",
+    "phoneNumber": "+20 125 000 9876"
+  },
+  {
+    "id": 14,
+    "name": "عمر عبدالعزيز إبراهيم",
+    "condition": "Active",
+    "serial": "5498712345",
+    "accessType": "حامل الكارت",
+    "job": "مهندس",
+    "phoneNumber": "+20 125 999 1234"
+  },
+  {
+    "id": 15,
+    "name": "آمنة مصطفى حسن",
+    "condition": "Active",
+    "serial": "5487654321",
+    "accessType": "حامل الكارت",
+    "job": "معلمة",
+    "phoneNumber": "+20 125 888 4321"
+  },
+  {
+    "id": 16,
+    "name": "علياء علي محمد",
+    "condition": "Active",
+    "serial": "5456789123",
+    "accessType": "حامل الكارت",
+    "job": "مهندسة",
+    "phoneNumber": "+20 125 777 5678"
+  },
+  {
+    "id": 17,
+    "name": "محمد إبراهيم محمد",
+    "condition": "Inactive",
+    "serial": "5432987654",
+    "accessType": "مدير الهيكل التنظيمي",
+    "job": "مدير",
+    "phoneNumber": "+20 125 666 9876"
+  },
+  {
+    "id": 18,
+    "name": "أميرة أحمد علي",
+    "condition": "Active",
+    "serial": "5478934567",
+    "accessType": "حامل الكارت",
+    "job": "طبيبة",
+    "phoneNumber": "+20 125 555 3456"
+  },
+  {
+    "id": 19,
+    "name": "نادية محمد صالح",
+    "condition": "Active",
+    "serial": "5423456789",
+    "accessType": "حامل الكارت",
+    "job": "مدرسة",
+    "phoneNumber": "+20 125 444 6789"
+  }
+]

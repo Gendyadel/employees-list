@@ -1,0 +1,196 @@
+@use "@angular/material" as mat;
+@include mat.core();
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+$primary-palette: (
+  50: #2d4190,
+  100: #2d4190,
+  200: #2d4190,
+  300: #2d4190,
+  400: #2d4190,
+  500: #2d4190,
+  600: #2d4190,
+  700: #2d4190,
+  800: #2d4190,
+  900: #2d4190,
+  A100: #2d4190,
+  A200: #2d4190,
+  A400: #2d4190,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+$accent-palette: (
+  50: #e35c9c,
+  100: #e35c9c,
+  200: #e35c9c,
+  300: #e35c9c,
+  400: #e35c9c,
+  500: #e35c9c,
+  600: #e35c9c,
+  700: #e35c9c,
+  800: #e35c9c,
+  900: #e35c9c,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+$red-palette: (
+  50: #e65151,
+  100: #e65151,
+  200: #e65151,
+  300: #e65151,
+  400: #e65151,
+  500: #e65151,
+  600: #e65151,
+  700: #e65151,
+  800: #e65151,
+  900: #e65151,
+  A100: #e65151,
+  A200: #e65151,
+  A400: #e65151,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+
+$my-primary-color: mat.define-palette($primary-palette);
+$my-accent-color: mat.define-palette($accent-palette);
+$my-warn-color: mat.define-palette($red-palette);
+
+$employees-list-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary-color,
+      accent: $my-accent-color,
+      warn: $my-warn-color,
+    ),
+    typography:
+      mat.define-typography-config(
+        $font-family: "Almarai",
+      ),
+    density: 0,
+  )
+);
+.dense-form-field {
+  @include mat.all-component-densities(-3);
+}
+@include mat.all-component-themes($employees-list-theme);
+
+html,
+body {
+  font-family: "Almarai", Roboto, "Helvetica Neue";
+  background: #f6f7f9;
+  height: 100%;
+}
+
+.danger {
+  color: #e65151;
+}
+.success {
+  color: #28be89;
+}
+.secondary {
+  color: #e35c9c;
+}
+.primary {
+  color: #2d4190;
+}
+
+.mx-card {
+  border-radius: 34px;
+  background: #fff;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+}
+
+@media screen and (max-width: 650px) {
+  .content {
+    flex-direction: column;
+    width: max-content;
+  }
+}
+
+.title {
+  text-align: right;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.text-secondary {
+  color: #9ca0b0 !important;
+  font-size: 12px !important;
+  text-align: right !important;
+}
+.text-primary {
+  color: #0a143a !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  text-align: right !important;
+  direction: ltr !important;
+}
+
+.mdc-button {
+  border-radius: 20px !important;
+}
+
+// table styles:
+/* Change background color of table header */
+.mat-mdc-header-row {
+  background-color: #f6f7f9 !important;
+}
+//change the font of the Table header
+th {
+  color: #0a143a;
+  //text-align: right !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+}
+td {
+  color: #636888;
+  // text-align: right !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: normal;
+}
+tr:nth-child(even) {
+  background-color: #f6f7f9;
+}
+
+.first-curved-header {
+  border-top-right-radius: 20px;
+}
+.last-curved-header {
+  border-top-left-radius: 20px;
+}

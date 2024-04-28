@@ -1,0 +1,99 @@
+<div class="mx-card p-3">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef class="first-curved-header">
+        <mat-checkbox
+          color="primary"
+          (change)="$event ? toggleAllRows() : null"
+          [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()"
+          [aria-label]="checkboxLabel()"
+        >
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox
+          color="primary"
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)"
+          [aria-label]="checkboxLabel(row)"
+        >
+        </mat-checkbox>
+      </td>
+    </ng-container>
+
+    @for (column of displayedHeaders; track $index;let last = $last) {
+    <ng-container matColumnDef="{{ column.name }}">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header
+        sortActionDescription="Sort by {{ column.name }}"
+        [ngClass]="{ 'last-curved-header': last }"
+      >
+        {{ column.nameAr }}
+      </th>
+      @if (column.name === 'condition') {
+      <td mat-cell *matCellDef="let element">
+        <div
+          class="status-box"
+          [ngClass]="{
+            'active-box': element[column.name] === 'Active',
+            'inactive-box': element[column.name] === 'Inactive'
+          }"
+        >
+          <span
+            class="status-text mx-2"
+            [ngClass]="{
+              success: element[column.name] === 'Active',
+              danger: element[column.name] === 'Inactive'
+            }"
+          >
+            {{ element[column.name] === "Active" ? "فعال" : "غير فعال" }}
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="4"
+            height="4"
+            viewBox="0 0 4 4"
+            fill="none"
+          >
+            <mask
+              id="mask0_0_12"
+              style="mask-type: luminance"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="4"
+              height="4"
+            >
+              <circle cx="2" cy="2" r="2" fill="white" />
+            </mask>
+            <g mask="url(#mask0_0_12)">
+              @if(element[column.name] === "Active"){
+              <rect width="4" height="4" fill="#28BE89" />
+              } @else {
+              <rect width="4" height="4" fill="#E65151" />
+              }
+            </g>
+          </svg>
+        </div>
+      </td>
+      } @else {
+      <td mat-cell *matCellDef="let element">{{ element[column.name] }}</td>
+      }
+    </ng-container>
+    }
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="displayedColumns.slice().reverse()"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns.slice().reverse()"
+    ></tr>
+  </table>
+</div>

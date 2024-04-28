@@ -1,0 +1,18 @@
+.status-box {
+  border-radius: 4px;
+  width: 98px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active-box {
+  background-color: rgba(40, 190, 137, 0.08);
+}
+.inactive-box {
+  background-color: rgba(230, 81, 81, 0.08);
+}
+.status-text {
+  text-align: right;
+  font-weight: 400 !important;
+}
