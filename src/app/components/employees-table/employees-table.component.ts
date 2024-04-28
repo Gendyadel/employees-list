@@ -2,11 +2,12 @@ import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { EmployeeService } from '../../services/employee.service';
 import { Employee } from '../../models/employee.model';
 import { SelectionModel } from '@angular/cdk/collections';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { selectFilterResults } from '../../store/selectors/filter.selectors';
 
 @Component({
   selector: 'app-employees-table',
@@ -31,11 +32,13 @@ export class EmployeesTableComponent implements AfterViewInit, OnInit, OnDestroy
   selection = new SelectionModel<Employee>(true, []);
   private subscriptions: Subscription[] = [];
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(private store: Store) { }
   ngOnInit(): void {
-    this.subscriptions.push(this.employeeService.getAllEmployees().subscribe((data) => {
-      this.dataSource.data = data
-    }))
+    this.store.select(selectFilterResults).subscribe(
+      (data) => {
+        this.dataSource.data = data
+      }
+    );
   }
 
   ngAfterViewInit() {

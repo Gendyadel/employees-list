@@ -4,7 +4,7 @@
     "name": "أحمد محمد علي",
     "condition": "Active",
     "serial": "5467898765",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "محاسب",
     "phoneNumber": "+20 125 833 9687"
   },
@@ -13,7 +13,7 @@
     "name": "أحمد محمد علي",
     "condition": "Inactive",
     "serial": "54987232765",
-    "accessType": "مدير الهيكل التنظيمي",
+    "accessType": "Admin",
     "job": "مدير",
     "phoneNumber": "+20 125 833 9687"
   },
@@ -22,8 +22,8 @@
     "name": "سارة أحمد علي",
     "condition": "Active",
     "serial": "5483928712",
-    "accessType": "حامل الكارت",
-    "job": "مهندسة",
+    "accessType": "Cardholder",
+    "job": "مهندس",
     "phoneNumber": "+20 125 777 1234"
   },
   {
@@ -31,7 +31,7 @@
     "name": "محمود علي خليل",
     "condition": "Active",
     "serial": "5432187654",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "مدرس",
     "phoneNumber": "+20 125 999 4567"
   },
@@ -40,7 +40,7 @@
     "name": "ليلى محمد صالح",
     "condition": "Active",
     "serial": "5498765432",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "طبيبة",
     "phoneNumber": "+20 125 888 9876"
   },
@@ -49,7 +49,7 @@
     "name": "علي محمد عبدالرحمن",
     "condition": "Inactive",
     "serial": "5478234567",
-    "accessType": "مدير الهيكل التنظيمي",
+    "accessType": "Admin",
     "job": "مدير",
     "phoneNumber": "+20 125 777 3333"
   },
@@ -58,7 +58,7 @@
     "name": "نورا عبدالعزيز إبراهيم",
     "condition": "Active",
     "serial": "5498712345",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "محاسبة",
     "phoneNumber": "+20 125 666 7890"
   },
@@ -67,7 +67,7 @@
     "name": "خالد مصطفى حسن",
     "condition": "Active",
     "serial": "5487654321",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "مهندس",
     "phoneNumber": "+20 125 555 4321"
   },
@@ -76,8 +76,8 @@
     "name": "مريم علي محمد",
     "condition": "Active",
     "serial": "5456789123",
-    "accessType": "حامل الكارت",
-    "job": "معلمة",
+    "accessType": "Cardholder",
+    "job": "مصمم",
     "phoneNumber": "+20 125 444 5678"
   },
   {
@@ -85,7 +85,7 @@
     "name": "حسن إبراهيم محمد",
     "condition": "Inactive",
     "serial": "5432987654",
-    "accessType": "مدير الهيكل التنظيمي",
+    "accessType": "Admin",
     "job": "مدير",
     "phoneNumber": "+20 125 333 9876"
   },
@@ -94,7 +94,7 @@
     "name": "فاطمة أحمد علي",
     "condition": "Active",
     "serial": "5478934567",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "طبيبة",
     "phoneNumber": "+20 125 222 3456"
   },
@@ -103,7 +103,7 @@
     "name": "عبدالله محمد صالح",
     "condition": "Active",
     "serial": "5423456789",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "مدرس",
     "phoneNumber": "+20 125 111 6789"
   },
@@ -112,7 +112,7 @@
     "name": "ريم محمد عبدالرحمن",
     "condition": "Active",
     "serial": "5498765432",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "محاسبة",
     "phoneNumber": "+20 125 000 9876"
   },
@@ -121,7 +121,7 @@
     "name": "عمر عبدالعزيز إبراهيم",
     "condition": "Active",
     "serial": "5498712345",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "مهندس",
     "phoneNumber": "+20 125 999 1234"
   },
@@ -130,8 +130,8 @@
     "name": "آمنة مصطفى حسن",
     "condition": "Active",
     "serial": "5487654321",
-    "accessType": "حامل الكارت",
-    "job": "معلمة",
+    "accessType": "Cardholder",
+    "job": "مصمم",
     "phoneNumber": "+20 125 888 4321"
   },
   {
@@ -139,8 +139,8 @@
     "name": "علياء علي محمد",
     "condition": "Active",
     "serial": "5456789123",
-    "accessType": "حامل الكارت",
-    "job": "مهندسة",
+    "accessType": "Cardholder",
+    "job": "مهندس",
     "phoneNumber": "+20 125 777 5678"
   },
   {
@@ -148,7 +148,7 @@
     "name": "محمد إبراهيم محمد",
     "condition": "Inactive",
     "serial": "5432987654",
-    "accessType": "مدير الهيكل التنظيمي",
+    "accessType": "Admin",
     "job": "مدير",
     "phoneNumber": "+20 125 666 9876"
   },
@@ -157,8 +157,8 @@
     "name": "أميرة أحمد علي",
     "condition": "Active",
     "serial": "5478934567",
-    "accessType": "حامل الكارت",
-    "job": "طبيبة",
+    "accessType": "Cardholder",
+    "job": "محاسب",
     "phoneNumber": "+20 125 555 3456"
   },
   {
@@ -166,7 +166,7 @@
     "name": "نادية محمد صالح",
     "condition": "Active",
     "serial": "5423456789",
-    "accessType": "حامل الكارت",
+    "accessType": "Cardholder",
     "job": "مدرسة",
     "phoneNumber": "+20 125 444 6789"
   }

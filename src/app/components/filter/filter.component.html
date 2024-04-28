@@ -20,12 +20,13 @@
       <div class="d-flex flex-column mx-3">
         <small class="text-secondary">عدد المستخدمون في الوحدة</small>
         <div class="d-flex flex-row-reverse">
-          <p class="text-primary mb-0 mx-1">{{ usersCount }}</p>
+          <p class="text-primary mb-0 mx-1">{{ usersCount | async }}</p>
           <p class="text-primary mb-0">مستخدم</p>
         </div>
       </div>
     </div>
-    <div class="d-flex">
+
+    <form [formGroup]="filterForm" class="d-flex">
       <button mat-flat-button color="primary" class="reverse p-3">
         <mat-icon>add_circle_outline</mat-icon>
         إضافة مستخدم
@@ -33,27 +34,46 @@
       <app-divider></app-divider>
       <div class="dense-form-field">
         <mat-form-field>
-          <mat-label>فرز</mat-label>
-          <mat-select>
-            @for (food of foods; track food) {
-            <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+          <mat-label>الحالة</mat-label>
+          <mat-select formControlName="condition">
+            <mat-option [value]="''">الجميع</mat-option>
+            @for (condition of filterConfig?.conditions; track condition) {
+            <mat-option [value]="condition.value">{{
+              condition.viewValue
+            }}</mat-option>
             }
           </mat-select>
-          <mat-icon matPrefix matPrefix class="pb-2">tune</mat-icon>
+          <mat-icon matPrefix matPrefix>tune</mat-icon>
         </mat-form-field>
       </div>
       <app-divider></app-divider>
       <div class="dense-form-field">
         <mat-form-field class="mb-0">
-          <mat-label>بحث</mat-label>
-          <mat-select>
-            @for (food of foods; track food) {
-            <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+          <mat-label>الصلاحية</mat-label>
+          <mat-select formControlName="access">
+            <mat-option [value]="''">الجميع</mat-option>
+            @for (access of filterConfig?.accessTypes; track access) {
+            <mat-option [value]="access.value">{{
+              access.viewValue
+            }}</mat-option>
             }
           </mat-select>
-          <mat-icon matPrefix class="pb-2">search</mat-icon>
+          <mat-icon matPrefix>tune</mat-icon>
         </mat-form-field>
       </div>
-    </div>
+      <app-divider></app-divider>
+      <div class="dense-form-field">
+        <mat-form-field class="mb-0">
+          <mat-label>الوظيفة</mat-label>
+          <mat-select formControlName="job">
+            <mat-option [value]="''">الجميع</mat-option>
+            @for (job of filterConfig?.jobs; track job) {
+            <mat-option [value]="job">{{ job }}</mat-option>
+            }
+          </mat-select>
+          <mat-icon matPrefix>tune</mat-icon>
+        </mat-form-field>
+      </div>
+    </form>
   </div>
 </div>

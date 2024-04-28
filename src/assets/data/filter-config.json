@@ -1,0 +1,11 @@
+{
+  "jobs": ["محاسب", "مدير", "مهندس", "مصمم"],
+  "conditions": [
+    { "value": "Active", "viewValue": "فعال" },
+    { "value": "Inactive", "viewValue": "غير فعال" }
+  ],
+  "accessTypes": [
+    { "value": "Cardholder", "viewValue": "حامل الكارت" },
+    { "value": "Admin", "viewValue": "مدير الهيكل التنظيمي" }
+  ]
+}

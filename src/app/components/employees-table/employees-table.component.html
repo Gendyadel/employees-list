@@ -81,6 +81,14 @@
           </svg>
         </div>
       </td>
+      } @else if (column.name === 'accessType') {
+      <td mat-cell *matCellDef="let element">
+        {{
+          element[column.name] === "Cardholder"
+            ? "حامل الكارت"
+            : "مدير الهيكل التنظيمي"
+        }}
+      </td>
       } @else {
       <td mat-cell *matCellDef="let element">{{ element[column.name] }}</td>
       }
