@@ -8,17 +8,19 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectFilterResults } from '../../store/selectors/filter.selectors';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-employees-table',
   standalone: true,
-  imports: [MatTableModule, MatSortModule, MatCheckboxModule, CommonModule],
+  imports: [MatTableModule, MatSortModule, MatCheckboxModule, CommonModule, MatIconModule, MatButtonModule],
   templateUrl: './employees-table.component.html',
   styleUrl: './employees-table.component.scss'
 })
 export class EmployeesTableComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild(MatSort) sort!: MatSort;
-  displayedColumns: string[] = ['select', 'id', 'condition', 'name', 'serial', 'accessType', 'job', 'phoneNumber'];
+  displayedColumns: string[] = ['select', 'id', 'condition', 'name', 'serial', 'accessType', 'job', 'phoneNumber', 'action'];
   displayedHeaders: { name: string, nameAr: string }[] = [
     { name: 'id', nameAr: 'المُسلسل' },
     { name: 'condition', nameAr: 'الحالة' },
@@ -27,6 +29,7 @@ export class EmployeesTableComponent implements AfterViewInit, OnInit, OnDestroy
     { name: 'accessType', nameAr: 'صلاحية المستخدم' },
     { name: 'job', nameAr: 'الوظيفة' },
     { name: 'phoneNumber', nameAr: 'رقم الهاتف' },
+    { name: 'action', nameAr: '' }
   ];
   dataSource = new MatTableDataSource<Employee>([]);
   selection = new SelectionModel<Employee>(true, []);

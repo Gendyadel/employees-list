@@ -89,12 +89,17 @@
             : "مدير الهيكل التنظيمي"
         }}
       </td>
+      } @else if (column.name === 'action') {
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button aria-label="actions">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </td>
       } @else {
       <td mat-cell *matCellDef="let element">{{ element[column.name] }}</td>
       }
     </ng-container>
     }
-
     <tr
       mat-header-row
       *matHeaderRowDef="displayedColumns.slice().reverse()"
