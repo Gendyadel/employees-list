@@ -77,7 +77,6 @@ export class FilterComponent implements OnInit, OnDestroy {
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams,
-      queryParamsHandling: 'merge', // Preserve existing query parameters
     });
     this.store.dispatch(updateFilter({ filterConfig: this.filterForm.value }));
   }

@@ -1,79 +1,75 @@
-<div class="mx-card p-3">
-  <div class="d-flex flex-row-reverse justify-content-between pt-3">
-    <div class="d-flex flex-row-reverse">
-      <div class="icon-container">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-          fill="none"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M6.85714 10.2857C4.01571 10.2857 1.71429 7.98429 1.71429 5.14286C1.71429 2.30143 4.01571 0 6.85714 0C9.69857 0 12 2.30143 12 5.14286C12 7.98429 9.69857 10.2857 6.85714 10.2857ZM0 18C0 14.2129 3.07005 11.1429 6.85714 11.1429C10.6442 11.1429 13.7143 14.2129 13.7143 18H12C12 15.1597 9.69746 12.8571 6.85714 12.8571C4.01682 12.8571 1.71429 15.1597 1.71429 18H0ZM10.2857 5.14286C10.2857 7.03714 8.75143 8.57143 6.85714 8.57143C4.96286 8.57143 3.42857 7.03714 3.42857 5.14286C3.42857 3.24857 4.96286 1.71429 6.85714 1.71429C8.75143 1.71429 10.2857 3.24857 10.2857 5.14286ZM13.9577 11.7454C16.4182 12.8536 18.0003 15.3015 18 18H16.2857C16.2861 15.976 15.0995 14.1399 13.254 13.3089L13.9569 11.7454H13.9577ZM16.2857 6.42857C16.2864 4.51823 15.1342 2.7963 13.368 2.06829L12.8923 3.73371C14.0755 4.31216 14.7431 5.59467 14.5381 6.89566C14.3332 8.19665 13.3037 9.21185 12 9.39857V11.124C14.4279 10.9028 16.2865 8.86655 16.2857 6.42857Z"
-            fill="#E35C9C"
-          />
-        </svg>
-      </div>
-      <div class="d-flex flex-column mx-3">
-        <small class="text-secondary">عدد المستخدمون في الوحدة</small>
-        <div class="d-flex flex-row-reverse">
-          <p class="text-primary mb-0 mx-1">{{ usersCount | async }}</p>
-          <p class="text-primary mb-0">مستخدم</p>
-        </div>
+<div class="d-flex flex-row-reverse justify-content-between pt-3">
+  <div class="d-flex flex-row-reverse">
+    <div class="icon-container">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M6.85714 10.2857C4.01571 10.2857 1.71429 7.98429 1.71429 5.14286C1.71429 2.30143 4.01571 0 6.85714 0C9.69857 0 12 2.30143 12 5.14286C12 7.98429 9.69857 10.2857 6.85714 10.2857ZM0 18C0 14.2129 3.07005 11.1429 6.85714 11.1429C10.6442 11.1429 13.7143 14.2129 13.7143 18H12C12 15.1597 9.69746 12.8571 6.85714 12.8571C4.01682 12.8571 1.71429 15.1597 1.71429 18H0ZM10.2857 5.14286C10.2857 7.03714 8.75143 8.57143 6.85714 8.57143C4.96286 8.57143 3.42857 7.03714 3.42857 5.14286C3.42857 3.24857 4.96286 1.71429 6.85714 1.71429C8.75143 1.71429 10.2857 3.24857 10.2857 5.14286ZM13.9577 11.7454C16.4182 12.8536 18.0003 15.3015 18 18H16.2857C16.2861 15.976 15.0995 14.1399 13.254 13.3089L13.9569 11.7454H13.9577ZM16.2857 6.42857C16.2864 4.51823 15.1342 2.7963 13.368 2.06829L12.8923 3.73371C14.0755 4.31216 14.7431 5.59467 14.5381 6.89566C14.3332 8.19665 13.3037 9.21185 12 9.39857V11.124C14.4279 10.9028 16.2865 8.86655 16.2857 6.42857Z"
+          fill="#E35C9C"
+        />
+      </svg>
+    </div>
+    <div class="d-flex flex-column mx-3">
+      <small class="text-secondary">عدد المستخدمون في الوحدة</small>
+      <div class="d-flex flex-row-reverse">
+        <p class="text-primary mb-0 mx-1">{{ usersCount | async }}</p>
+        <p class="text-primary mb-0">مستخدم</p>
       </div>
     </div>
-
-    <form [formGroup]="filterForm" class="d-flex">
-      <button mat-flat-button color="primary" class="reverse p-3">
-        <mat-icon>add_circle_outline</mat-icon>
-        إضافة مستخدم
-      </button>
-      <app-divider></app-divider>
-      <div class="dense-form-field">
-        <mat-form-field>
-          <mat-label>الحالة</mat-label>
-          <mat-select formControlName="condition">
-            <mat-option [value]="''">الجميع</mat-option>
-            @for (condition of filterConfig?.conditions; track condition) {
-            <mat-option [value]="condition.value">{{
-              condition.viewValue
-            }}</mat-option>
-            }
-          </mat-select>
-          <mat-icon matPrefix matPrefix>tune</mat-icon>
-        </mat-form-field>
-      </div>
-      <app-divider></app-divider>
-      <div class="dense-form-field">
-        <mat-form-field class="mb-0">
-          <mat-label>الصلاحية</mat-label>
-          <mat-select formControlName="access">
-            <mat-option [value]="''">الجميع</mat-option>
-            @for (access of filterConfig?.accessTypes; track access) {
-            <mat-option [value]="access.value">{{
-              access.viewValue
-            }}</mat-option>
-            }
-          </mat-select>
-          <mat-icon matPrefix>tune</mat-icon>
-        </mat-form-field>
-      </div>
-      <app-divider></app-divider>
-      <div class="dense-form-field">
-        <mat-form-field class="mb-0">
-          <mat-label>الوظيفة</mat-label>
-          <mat-select formControlName="job">
-            <mat-option [value]="''">الجميع</mat-option>
-            @for (job of filterConfig?.jobs; track job) {
-            <mat-option [value]="job">{{ job }}</mat-option>
-            }
-          </mat-select>
-          <mat-icon matPrefix>tune</mat-icon>
-        </mat-form-field>
-      </div>
-    </form>
   </div>
+
+  <form [formGroup]="filterForm" class="d-flex">
+    <button mat-flat-button color="primary" class="reverse p-3">
+      <mat-icon>add_circle_outline</mat-icon>
+      إضافة مستخدم
+    </button>
+    <app-divider></app-divider>
+    <div class="dense-form-field">
+      <mat-form-field>
+        <mat-label>الحالة</mat-label>
+        <mat-select formControlName="condition">
+          <mat-option [value]="''">الجميع</mat-option>
+          @for (condition of filterConfig?.conditions; track condition) {
+          <mat-option [value]="condition.value">{{
+            condition.viewValue
+          }}</mat-option>
+          }
+        </mat-select>
+        <mat-icon matPrefix matPrefix>tune</mat-icon>
+      </mat-form-field>
+    </div>
+    <app-divider></app-divider>
+    <div class="dense-form-field">
+      <mat-form-field class="mb-0">
+        <mat-label>الصلاحية</mat-label>
+        <mat-select formControlName="access">
+          <mat-option [value]="''">الجميع</mat-option>
+          @for (access of filterConfig?.accessTypes; track access) {
+          <mat-option [value]="access.value">{{ access.viewValue }}</mat-option>
+          }
+        </mat-select>
+        <mat-icon matPrefix>tune</mat-icon>
+      </mat-form-field>
+    </div>
+    <app-divider></app-divider>
+    <div class="dense-form-field">
+      <mat-form-field class="mb-0">
+        <mat-label>الوظيفة</mat-label>
+        <mat-select formControlName="job">
+          <mat-option [value]="''">الجميع</mat-option>
+          @for (job of filterConfig?.jobs; track job) {
+          <mat-option [value]="job">{{ job }}</mat-option>
+          }
+        </mat-select>
+        <mat-icon matPrefix>tune</mat-icon>
+      </mat-form-field>
+    </div>
+  </form>
 </div>

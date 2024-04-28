@@ -1,20 +1,22 @@
 <div class="container">
   <h2 class="title primary mt-5">المستخدمون</h2>
-  <div class="button-container mt-4 mb-2">
-    <button
-      mat-mini-fab
-      color="primary"
+  <div class="mx-card p-3">
+    <div
+      class="d-flex flex-row-reverse justify-content-between px-3 cursor-pointer"
       (click)="toggleFilter()"
-      aria-label="Toggle Filter"
     >
-      <mat-icon>filter_alt</mat-icon>
-    </button>
+      <h3>فلتر</h3>
+      <mat-icon class="mt-2">{{
+        isFilterExpanded ? "expand_less" : "expand_more"
+      }}</mat-icon>
+    </div>
+    <div
+      class="card-body"
+      [@expandCollapse]="isFilterExpanded ? 'expanded' : 'collapsed'"
+    >
+      <app-filter></app-filter>
+    </div>
   </div>
-  <div
-    class="filter-container"
-    [@expandCollapse]="isFilterExpanded ? 'expanded' : 'collapsed'"
-  >
-    <app-filter></app-filter>
-  </div>
+
   <app-employees-table></app-employees-table>
 </div>
